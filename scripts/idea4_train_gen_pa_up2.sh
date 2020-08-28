@@ -1,0 +1,12 @@
+python 2_train_gen_pa_up2_idea4.py \
+	--data_dir_pcl data/shapenet/ShapeNet_pointclouds \
+	--data_dir_pcl_gt /home/ubuntu/3Dreconstruction/AttentionDPCR/data/4096 \
+	--exp expts/2/idea4/pa_up2_idea3_2048_telephone \
+	--gpu 0 \
+	--category telephone \
+	--up_ratio 4 \
+	--batch_size 64 \
+	--lr 5e-4 \
+    --max_epoch 50 \
+	--bn_decoder \
+	--print_n 20 \
