@@ -188,7 +188,7 @@ def concat_features(features, up_l2_points, l1_points, global_feature, is_traini
             up_ratio = 2
             new_points_list = []
             for i in range(up_ratio):
-                concat_feat = tf.concat([up_l2_points, l1_points, global_feature], axis=-1)
+                concat_feat = tf.concat([features, up_l2_points, l1_points, global_feature], axis=-1)
                 concat_feat = tf.expand_dims(concat_feat, axis=2)
                 concat_feat = conv2d(concat_feat, 256, [1, 1],
                                               padding='VALID', stride=[1, 1],
@@ -212,7 +212,7 @@ def concat_features4(features, up_l2_points, l1_points, global_feature, is_train
             up_ratio = 4
             new_points_list = []
             for i in range(up_ratio):
-                concat_feat = tf.concat([up_l2_points, l1_points, global_feature], axis=-1)
+                concat_feat = tf.concat([features, up_l2_points, l1_points, global_feature], axis=-1)
                 concat_feat = tf.expand_dims(concat_feat, axis=2)
                 concat_feat = conv2d(concat_feat, 256, [1, 1],
                                               padding='VALID', stride=[1, 1],
